@@ -7,7 +7,10 @@
 
 <script>
 export default {
-   middleware: ['checkAuth']
+   middleware: ['checkAuth'],
+   created() {
+       this.$log()
+   }
 }
 </script>
     
