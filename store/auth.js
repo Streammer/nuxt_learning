@@ -1,6 +1,6 @@
 export const state = () => ({
-    isAuthentificated: false
+    isAuthentificated: true
 })
-export const getterd = {
+export const getters = {
     isAuthentificated: state => state.isAuthentificated
 }
