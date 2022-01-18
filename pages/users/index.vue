@@ -11,12 +11,31 @@
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+// import { mapGetters } from "vuex";
 export default {
-  computed: {
-    ...mapGetters({
-      users: "users/getUsers",
-    }),
+  async fetch({store}) {
+    
   },
+  async asyncData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const users = await response.json()
+    return {
+      users
+    }
+  },
+  data() {
+    return {
+      users: []
+    }
+  },
+  computed: {
+    // ...mapGetters({
+    //   users: "users/getUsers",
+    // }),
+  },
+  // async created () {
+  //   const response = await fetch('https://jsonplaceholder.typicode.com/users')
+  //   this.users = await response.json()
+  // }
 };
 </script>
