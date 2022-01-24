@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Обертка над  users</h1>
-        <nuxt-child/>
+        <nuxt-child word='hello' />
     </div>
 </template>>
 
