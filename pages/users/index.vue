@@ -15,6 +15,7 @@
 export default {
   async fetch({store}) {
    //if you load data through the action from vuex
+   console.log(store);
   },
   async asyncData() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
